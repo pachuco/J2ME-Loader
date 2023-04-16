@@ -17,6 +17,7 @@
 package javax.microedition.media;
 
 import org.billthefarmer.mididriver.MidiDriver;
+import org.billthefarmer.mididriver.ReverbConstants;
 
 public class MidiInterface {
 	private static MidiDriver driver;
@@ -25,6 +26,7 @@ public class MidiInterface {
 		if (driver == null) {
 			driver = MidiDriver.getInstance();
 			driver.start();
+			driver.setReverb(ReverbConstants.OFF);
 		}
 		return driver;
 	}
