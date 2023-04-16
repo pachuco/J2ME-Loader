@@ -25,8 +25,8 @@ public class MidiInterface {
 	public static synchronized MidiDriver getDriver() {
 		if (driver == null) {
 			driver = MidiDriver.getInstance();
-			driver.setReverb(ReverbConstants.OFF);
 			driver.start();
+			driver.setReverb(ReverbConstants.OFF);
 		}
 		return driver;
 	}
